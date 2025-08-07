@@ -1,1 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code:wght@400;700&display=swap');
+
+:root {
+    --fundo-principal: #1f2937; /* Cinza escuro */
+    --fundo-secundario: #374151; /* Cinza um pouco mais claro */
+    --borda-e-texto: #e5e7eb; /* Cinza claro */
+    --acento: #34d399; /* Verde esmeralda */
+    --fonte-principal: 'Inter', sans-serif;
+    --fonte-mono: 'Fira Code', monospace;
+
+    --forca-fraca: #ef4444; /* Vermelho */
+    --forca-media: #facc15; /* Amarelo */
+    --forca-forte: #22c55e; /* Verde */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo-principal);
+    color: var(--borda-e-texto);
+    font-family: var(--fonte-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.conteudo {
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--fundo-secundario);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.conteudo-titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.conteudo-titulo img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.titulo-principal {
+    font-family: var(--fonte-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.titulo-secundario {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9ca3af;
+    margin: 0.5rem 0 0;
+}
+
+.conteudo-senha {
+    background: var(--fundo-principal);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--acento);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.conteudo-senha label {
+    font-size: 1rem;
+    color: var(--acento);
+}
+
+#campo-senha {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: var(--borda-e-texto);
+    font-family: var(--fonte-mono);
+    font-size: 1.5rem;
+    outline: none;
+    padding: 0.25rem;
+}
+
+.parametro {
+    background-color: var(--fundo-principal);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.parametro-titulo {
+    font-family: var(--fonte-mono);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.parametro-senha {
+    width: 100%;
+}
+
+.parametro-senha__titulo {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.parametro-senha-botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parametro-senha__botao {
+    background-color: var(--fundo-secundario);
+    color: var(--acento);
+    border: 2px solid var(--acento);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.parametro-senha__botao:hover {
+    background-color: var(--acento);
+    color: var(--fundo-secundario);
+}
+
+.parametro-senha__texto {
+    font-family: var(--fonte-mono);
+    padding: 0.75rem 1.5rem;
+    margin: 0 1rem;
+    border: 2px solid var(--acento);
+    border-radius: 6px;
+    font-size: 1.5rem;
+}
+
+.parametro-senha-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--acento);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.checkbox:checked::before {
+    content: '✓';
+    font-size: 1.25rem;
+    color: var(--acento);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.barra {
+    background-color: var(--fundo-secundario);
+    height: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.forca {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+.fraca {
+    width: 33%;
+    background-color: var(--forca-fraca);
+}
+
+.media {
+    width: 66%;
+    background-color: var(--forca-media);
+}
+
+.forte {
+    width: 100%;
+    background-color: var(--forca-forte);
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.entropia {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: #9ca3af;
+}
+
+@media screen and (min-width: 768px) {
+    .conteudo {
+        padding: 3rem;
+    }
+
+    .parametro-coluna__senha {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .parametro-senha {
+        width: 33.33%;
+    }
+}
 
