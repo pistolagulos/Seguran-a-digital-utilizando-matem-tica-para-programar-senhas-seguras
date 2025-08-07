@@ -1,1 +1,6 @@
-
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Círculo da alça da chave -->
+    <path d="M19 5C12.3726 5 7 10.3726 7 17C7 23.6274 12.3726 29 19 29C25.6274 29 31 23.6274 31 17C31 10.3726 25.6274 5 19 5Z" stroke="#0075FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Corpo e dentes da chave -->
+    <path d="M19 29V33.5H26.5V30H22.5V28H26.5V25H19" stroke="#0075FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
